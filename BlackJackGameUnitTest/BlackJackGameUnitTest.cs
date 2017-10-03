@@ -23,7 +23,7 @@ namespace BlackJackGameUnitTest
         }
 
         [TestMethod]
-        void returnComputerCard()
+        void testReturnComputerCard()
         {
             //arrange and act
             string computerCard = BlackJackConsoleGame.BlackJackGame.returnComputerCard();
