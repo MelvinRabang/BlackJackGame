@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BlackJackConsoleGame
 {
-    class Program
+    public class BlackJackGame
     {
         static int computerSum = 0;
         static int playerSum = 0;
@@ -21,13 +17,9 @@ namespace BlackJackConsoleGame
 
         static void playBlackjackGame()
         {
-            
             Console.WriteLine("Your Cards: " + returnPlayerCard() + " "+ returnPlayerCard() + " = " + playerSum);
             Console.WriteLine("Computer Cards: " + returnComputerCard() + " " + returnComputerCard() + " = " + computerSum);
-
             hitThePlayerForCards();
-            
-                
         }
 
         static void hitThePlayerForCards()
@@ -60,7 +52,7 @@ namespace BlackJackConsoleGame
             } while (isPlayerWantsCardHit);
         }
 
-        static String returnPlayerCard()
+        public static String returnPlayerCard()
         {
             Random rnd = new Random();
             int value = rnd.Next(1, 10);
@@ -69,7 +61,7 @@ namespace BlackJackConsoleGame
             return value.ToString();
         }
 
-        static String returnComputerCard()
+        public static String returnComputerCard()
         {
             Random rnd = new Random();
             int value = rnd.Next(1, 10);
